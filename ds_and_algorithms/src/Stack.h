@@ -16,7 +16,7 @@ public:
 
 	// core functions
 	void push(const T &data);
-	void pop();
+	const T& pop();
 	bool empty() const;
 	const T& top() const;
 
@@ -102,10 +102,10 @@ void Stack<T>::push(const T &data)
 }
 
 template<typename T>
-void Stack<T>::pop() 
+const T& Stack<T>::pop() 
 {
 	assert(m_size >= 1);
-	--m_size;
+	return m_array[--m_size];
 }
 
 template<typename T>
