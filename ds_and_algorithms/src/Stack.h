@@ -38,6 +38,7 @@ private:
 
 	bool full() const;
 };
+
  template<typename T>
 Stack<T>::Stack() 
 	: m_array{ nullptr }, m_size{ 0 }, m_capacity{ 0 }
@@ -69,7 +70,7 @@ Stack<T>::Stack(std::initializer_list<T> list)
 {
 	m_array = new T[m_capacity];
 	int index{ 0 };
-	for (auto element : list) 
+	for (const auto &element : list) 
 	{
 		m_array[index] = element;
 		++index;
