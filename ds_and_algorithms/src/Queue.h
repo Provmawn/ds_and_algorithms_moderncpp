@@ -26,7 +26,7 @@ public:
 		for (int i{ 0 }; i < queue.m_size; ++i) {
 			out << queue.m_array[i] << ' ';
 		}
-		out << "size(" << queue.m_size << "), capacity(" << queue.m_capacity << ')';
+		out << "size(" << queue.m_size << "), capacity(" << queue.m_capacity << "), back_index(" << queue.m_back_index << ')';
 		return out;
 	}
 private:
@@ -102,32 +102,37 @@ Queue<T>::~Queue()
 template<typename T>
 void Queue<T>::enqueue(const T &data) 
 {
-	if (full()) {
+	if (full()) 
+	{
 		// increase capacity by +1
 		++m_capacity;
 		T *temp_array{ new T[m_capacity] };
-		for (int i{ 0 }; i < m_size; ++i) {
+		for (int i{ 0 }; i < m_size; ++i)
 			temp_array[i] = m_array[i];
-		}
 		delete[] m_array;
 		m_array = temp_array;
 	}
-	m_array[++m_back_index] = data;
+
+	if (empty())
+		m_array[m_back_index] = data;
+	else 
+		m_array[++m_back_index] = data;
 	++m_size;
 }
 
 template<typename T>
 const T& Queue<T>::dequeue() 
 {
-	auto ret{ m_array[m_front_index] };
+	assert(m_size >= 0);
 	// return first element and shift list to remove first element
+	auto front{ m_array[m_front_index] };
 
 	for (int i{ 0 }; i < m_size - 1; ++i)
 	{
 		m_array[i] = m_array[i + 1];
 	}
 	--m_size;
-	return ret;
+	return front;
 }
 
 template<typename T>
