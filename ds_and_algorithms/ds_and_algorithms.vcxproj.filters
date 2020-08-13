@@ -21,6 +21,9 @@
     <ClInclude Include="src\Queue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Deque.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Main.cpp">
