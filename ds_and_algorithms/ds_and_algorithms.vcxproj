@@ -143,6 +143,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Deque.h" />
+    <ClInclude Include="src\LinkedList.h" />
+    <ClInclude Include="src\Node.h" />
     <ClInclude Include="src\Queue.h" />
     <ClInclude Include="src\Stack.h" />
   </ItemGroup>
