@@ -91,6 +91,7 @@ void LinkedList<T>::push_front(const T &data)
 template<typename T>
 const T& LinkedList<T>::pop_front()
 {
+	assert(!empty());
 	const T& data{ m_head->m_data };
 	Node<T> *current{ m_head };
 	m_head = m_head->m_next;
@@ -111,8 +112,9 @@ void LinkedList<T>::push_back(const T &data)
 template<typename T>
 const T& LinkedList<T>::pop_back() 
 {
+	assert(!empty());
+
 	Node<T> *second_last{ m_head };
-	assert(second_last != nullptr);
 	if (second_last->m_next == nullptr)
 	{
 		const T &ret{ m_head->m_data };

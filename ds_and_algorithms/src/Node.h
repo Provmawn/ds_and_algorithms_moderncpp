@@ -7,7 +7,6 @@ class Node
 {
 public:
 	Node(const T &data);
-	~Node();
 
 	T m_data{};
 	Node *m_next{};
@@ -17,11 +16,5 @@ public:
 Node<T>::Node(const T &data)
 	: m_data{ data }, m_next{ nullptr }
 {
-}
-
-template<typename T>
-Node<T>::~Node()
-{
-	std::cout << "Node destroyed(" << m_data << ")\n";
 }
 #endif
