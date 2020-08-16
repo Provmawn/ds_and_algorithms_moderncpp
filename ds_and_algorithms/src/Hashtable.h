@@ -11,6 +11,7 @@ class Hashtable {
 public:
 	Hashtable() = default;
 	Hashtable(int capacity);
+	~Hashtable();
 
 	void insert(std::pair<T1, T2> key_value_pair);
 	const T2& find(const T1 &key);
@@ -35,6 +36,12 @@ Hashtable<T1, T2>::Hashtable(int capacity)
 {
 	assert(m_capacity >= 0);
 	m_table = new std::list<T2>[capacity];
+}
+
+template<typename T1, typename T2>
+Hashtable<T1, T2>::~Hashtable()
+{
+	delete[] m_table;
 }
 
 template<typename T1, typename T2>

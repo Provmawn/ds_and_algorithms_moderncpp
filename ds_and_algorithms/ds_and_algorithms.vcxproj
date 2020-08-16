@@ -142,6 +142,8 @@
     <ClCompile Include="src\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\BinaryTreeNode.h" />
+    <ClInclude Include="src\CompleteBinaryTree.h" />
     <ClInclude Include="src\Deque.h" />
     <ClInclude Include="src\DoublyLinkedList.h" />
     <ClInclude Include="src\DoublyNode.h" />

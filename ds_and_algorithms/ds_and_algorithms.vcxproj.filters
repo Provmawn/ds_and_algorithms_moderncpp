@@ -39,6 +39,12 @@
     <ClInclude Include="src\Hashtable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\CompleteBinaryTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BinaryTreeNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Main.cpp">
