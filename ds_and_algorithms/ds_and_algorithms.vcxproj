@@ -148,6 +148,7 @@
     <ClInclude Include="src\DoublyLinkedList.h" />
     <ClInclude Include="src\DoublyNode.h" />
     <ClInclude Include="src\Hashtable.h" />
+    <ClInclude Include="src\Heap.h" />
     <ClInclude Include="src\LinkedList.h" />
     <ClInclude Include="src\Node.h" />
     <ClInclude Include="src\Queue.h" />
