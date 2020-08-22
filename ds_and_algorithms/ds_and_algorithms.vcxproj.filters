@@ -54,6 +54,15 @@
     <ClInclude Include="src\BSTException.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\AVLTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AVLNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IAVLTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Main.cpp">

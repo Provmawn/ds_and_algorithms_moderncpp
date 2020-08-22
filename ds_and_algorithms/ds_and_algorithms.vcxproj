@@ -144,6 +144,8 @@
     <ClCompile Include="src\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\AVLNode.h" />
+    <ClInclude Include="src\AVLTree.h" />
     <ClInclude Include="src\BinarySearchTree.h" />
     <ClInclude Include="src\BinaryTreeNode.h" />
     <ClInclude Include="src\BSTException.h" />
@@ -153,6 +155,7 @@
     <ClInclude Include="src\DoublyNode.h" />
     <ClInclude Include="src\Hashtable.h" />
     <ClInclude Include="src\Heap.h" />
+    <ClInclude Include="src\IAVLTree.h" />
     <ClInclude Include="src\LinkedList.h" />
     <ClInclude Include="src\Node.h" />
     <ClInclude Include="src\Queue.h" />
